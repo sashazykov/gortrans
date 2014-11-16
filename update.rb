@@ -36,8 +36,8 @@ networks.each do |network_name|
           el['tags']['name'],
           el['tags']['type'] == 'route_master' ? 'master' : '',
           # el['tags']['operator'],
-          el['members'].select{|e| e['role'] == 'platform' }.size,
-          el['members'].select{|e| e['role'] == 'stop' }.size,
+          el['tags']['type'] == 'route_master' ? '' : el['members'].select{|e| e['role'] == 'platform' }.size,
+          el['tags']['type'] == 'route_master' ? '' : el['members'].select{|e| e['role'] == 'stop' }.size,
           # el.ways.size,
           ("%.1f km" % (el.ways.map(&:length).inject(&:+) / 1000) rescue ' '),
           "[#{el['id']}](http://openstreetmap.org/relation/#{el['id']})"].join(' | ')
