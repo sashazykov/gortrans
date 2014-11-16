@@ -47,7 +47,7 @@ networks.each do |network_name|
 
     out = out.flatten.join("\n")
 
-    File.open("#{network_name}.md", 'w') do |file|  
+    File.open("./networks/#{network_name}.md", 'w') do |file|  
       file.puts out
     end
 
