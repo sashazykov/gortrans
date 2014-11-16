@@ -1,0 +1,10 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    geo-distance (0.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  geo-distance
