@@ -1,3 +1,7 @@
-# gortrans
+# Gortrans
+
+This script generates routes list for several public transportation networks using OSM data.
 <% CONFIG['networks'].each do |network| %>
-[<%= network %>](https://github.com/alexandrz/gortrans/blob/master/networks/<%= network %>.md)<% end %>
+* [<%= network %>](https://github.com/alexandrz/gortrans/blob/master/networks/<%= network %>.md)<% end %>
+
+Run ``ruby update.rb`` to update data. Add more networks to ``config.yml``.
