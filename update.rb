@@ -33,7 +33,8 @@ CONFIG['networks'].each do |network_name|
         [ # order
           el['tags']['name'].split(' ')[0],
           el['tags']['ref'].to_i,
-          ['route_master', 'route'].find_index(el['tags']['type'])
+          ['route_master', 'route'].find_index(el['tags']['type']),
+          el['id'].to_i
         ] }.
       map{ |el|
         [ # row
