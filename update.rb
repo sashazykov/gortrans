@@ -21,7 +21,7 @@ CONFIG['networks'].each do |network_name|
     ['bus', 'trolleybus', 'tram'].each do |transport|
       out << "## #{transport}"
       out << %w(route type platforms stops length link).join(' | ')
-      out << (["---"] * 7).join(' | ')
+      out << (["---"] * 6).join(' | ')
       out << network.relations.
       select{ |el|
         el.is_a?(Relation) &&
